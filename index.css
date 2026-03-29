@@ -23,8 +23,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
+    padding: 14px;
     position: sticky;
+    background-color: #107e61;
     top: 0;
     z-index: 1000;
 }
@@ -75,15 +76,16 @@ body {
 }
 
 .container {
-    padding: 15px;
-    padding-bottom: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 500px;
 }
 
 .card {
     background: #fff;
     border-radius: 8px;
     padding: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     border: 1px solid #f0f0f0;
 }
 
