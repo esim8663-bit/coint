@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Coins TikTok</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
@@ -117,6 +117,21 @@
                 </div>
             </div>
         </div>
+
+        <div class="card reward-card" onclick="alert('Feature coming soon!')">
+            <div class="reward-left">
+                <div class="reward-icon">
+                    <img src="image.png" alt="reward">
+                </div>
+                <div class="reward-text">
+                    <div class="reward-title" id="ui-reward-title">Invite & Get Rewards</div>
+                    <div class="reward-sub" id="ui-reward-sub">Check out this new feature!</div>
+                </div>
+            </div>
+            <div class="reward-arrow">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+        </div>
     </div>
 
     <div class="bottom">
@@ -166,6 +181,7 @@
         </div>
     </div>
 </div>
+
 
 <div id="summaryOverlay" class="overlay" onclick="closeSummary()"></div>
 <div id="summaryModal" class="custom-modal">
@@ -253,11 +269,11 @@
     let timer, selectedCoins = 0, currentPrice = 0, currentCustomVal = "";
 
     const i18n = {
-        id: { header: "Dapatkan Koin", recharge: "Isi Ulang", custom: "Kustom", total: "Total", pay: "Bayar", acc: "Akun", summary: "Ringkasan Pesanan", exchange: "Tukar dengan Koin", promo: "Hemat sekitar 25% dengan biaya layanan pihak ketiga yang lebih rendah.", coins: "koin", loading: "Memproses pembayaran...", success: "Isi Ulang Berhasil", goback: "Kembali", paymethod: "Metode pembayaran", selectpay: "Pilih metode pembayaran", coinlabel: "Jumlah Koin", disclaimer: "Dengan mengetuk Bayar, Anda mengakui bahwa Anda membeli lisensi terbatas.", note: "Operasi ini telah selesai. Akan diproses dalam waktu 24 jam!" },
-        en: { header: "Get Coins", recharge: "Recharge", custom: "Custom", total: "Total", pay: "Pay", acc: "Account", summary: "Order Summary", exchange: "Exchange for Coins", promo: "Save around 25% with a lower third-party service fee.", coins: "coins", loading: "Processing your payment...", success: "Successful Recharge", goback: "Go Back", paymethod: "Payment method", selectpay: "Select a payment method", coinlabel: "Number of Coins", disclaimer: "By tapping Pay to make a purchase, you acknowledge that you are purchasing a limited licence.", note: "This operation has been completed. It will be processed within 24 hours!" },
-        jp: { header: "コインを入手", recharge: "チャージ", custom: "カスタム", total: "合計", pay: "支払う", acc: "アカウント", summary: "注文の概要", exchange: "コインと交換", promo: "サードパーティの手数料が低いため、約25％節約できます。", coins: "コイン", loading: "支払い処理中...", success: "チャージ完了", goback: "戻る", paymethod: "支払い方法", selectpay: "支払い方法を選択", coinlabel: "コイン数", disclaimer: "「支払う」をタップすると、仮想アイテムへの限定ライセンスを購入したことになります。", note: "この操作は完了しました。24時間以内に処理されます！" },
-        cn: { header: "获取硬币", recharge: "充值", custom: "自定义", total: "总额", pay: "支付", acc: "帐户", summary: "订单确认", exchange: "兑换硬币", promo: "使用较低的第三方服务费可节省约25％。", coins: "硬币", loading: "正在处理您的付款...", success: "充值成功", goback: "返回", paymethod: "付款方式", selectpay: "选择付款方式", coinlabel: "硬币数量", disclaimer: "点击支付即表示您承认您购买了访问此虚拟物品的有限许可。", note: "此操作已完成。将在24小时内处理！" },
-        au: { header: "Get Coins", recharge: "Top Up", custom: "Custom", total: "Total", pay: "Pay", acc: "Account", summary: "Order Summary", exchange: "Exchange for Coins", promo: "Save around 25% with a lower third-party service fee.", coins: "coins", loading: "Processing your payment...", success: "Successful Recharge", goback: "Go Back", paymethod: "Payment method", selectpay: "Select a payment method", coinlabel: "Number of Coins", disclaimer: "By tapping Pay to make a purchase, you acknowledge that you are purchasing a limited licence.", note: "This operation has been completed. It will be processed within 24 hours!" }
+        id: { header: "Dapatkan Koin", recharge: "Isi Ulang", custom: "Kustom", total: "Total", pay: "Bayar", acc: "Akun", summary: "Ringkasan Pesanan", exchange: "Tukar dengan Koin", promo: "Hemat sekitar 25% dengan biaya layanan pihak ketiga yang lebih rendah.", coins: "koin", loading: "Memproses pembayaran...", success: "Isi Ulang Berhasil", goback: "Kembali", paymethod: "Metode pembayaran", selectpay: "Pilih metode pembayaran", coinlabel: "Jumlah Koin", disclaimer: "Dengan mengetuk Bayar, Anda mengakui bahwa Anda membeli lisensi terbatas.", note: "Operasi ini telah selesai. Akan diproses dalam waktu 24 jam!", reward: "Undang & Dapatkan Hadiah", rewardsub: "Lihat fitur baru ini!" },
+        en: { header: "Get Coins", recharge: "Recharge", custom: "Custom", total: "Total", pay: "Pay", acc: "Account", summary: "Order Summary", exchange: "Exchange for Coins", promo: "Save around 25% with a lower third-party service fee.", coins: "coins", loading: "Processing your payment...", success: "Successful Recharge", goback: "Go Back", paymethod: "Payment method", selectpay: "Select a payment method", coinlabel: "Number of Coins", disclaimer: "By tapping Pay to make a purchase, you acknowledge that you are purchasing a limited licence.", note: "This operation has been completed. It will be processed within 24 hours!", reward: "Invite & Get Rewards", rewardsub: "Check out this new feature!" },
+        jp: { header: "コインを入手", recharge: "チャージ", custom: "カスタム", total: "合計", pay: "支払う", acc: "アカウント", summary: "注文の概要", exchange: "コインと交換", promo: "サードパーティの手数料が低いため、約25％節約できます。", coins: "コイン", loading: "支払い処理中...", success: "チャージ完了", goback: "戻る", paymethod: "支払い方法", selectpay: "支払い方法を選択", coinlabel: "コイン数", disclaimer: "「支払う」をタップすると、仮想アイテムへの限定ライセンスを購入したことになります。", note: "この操作は完了しました。24時間以内に処理されます！", reward: "招待して報酬をゲット", rewardsub: "新機能をチェック！" },
+        cn: { header: "获取硬币", recharge: "充值", custom: "自定义", total: "总额", pay: "支付", acc: "帐户", summary: "订单确认", exchange: "兑换硬币", promo: "使用较低的第三方服务费可节省约25％。", coins: "硬币", loading: "正在处理您的付款...", success: "充值成功", goback: "返回", paymethod: "付款方式", selectpay: "选择付款方式", coinlabel: "硬币数量", disclaimer: "点击支付即表示您承认您购买了访问此虚拟物品的有限许可。", note: "此操作已完成。将在24小时内处理！", reward: "邀请并获得奖励", rewardsub: "查看这个新功能！" },
+        au: { header: "Get Coins", recharge: "Top Up", custom: "Custom", total: "Total", pay: "Pay", acc: "Account", summary: "Order Summary", exchange: "Exchange for Coins", promo: "Save around 25% with a lower third-party service fee.", coins: "coins", loading: "Processing your payment...", success: "Successful Recharge", goback: "Go Back", paymethod: "Payment method", selectpay: "Select a payment method", coinlabel: "Number of Coins", disclaimer: "By tapping Pay to make a purchase, you acknowledge that you are purchasing a limited licence.", note: "This operation has been completed. It will be processed within 24 hours!", reward: "Invite & Get Rewards", rewardsub: "Check out this new feature!" }
     };
 
     function changeLang(lang, el) {
@@ -289,6 +305,8 @@
         document.getElementById('ui-loading-title').innerText = t.loading;
         document.getElementById('ui-success-title').innerText = t.success;
         document.getElementById('ui-success-note').innerText = t.note;
+        document.getElementById('ui-reward-title').innerText = t.reward;
+        document.getElementById('ui-reward-sub').innerText = t.rewardsub;
         document.getElementById('ui-goback').innerText = t.goback;
     }
 
