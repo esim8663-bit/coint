@@ -368,6 +368,7 @@ body {
 .total-row {
     display: flex;
     font-size: 15px;
+    font-weight: 700;
     color: #161823;
     justify-content: space-between;
 }
@@ -568,8 +569,9 @@ body {
 }
 
 .input-label-row span {
-    font-size: 10px;
-    color: #8a8b91;
+    font-size: 12px;
+    font-weight: 700;
+    color: #000000;
 }
 
 .input-display {
@@ -599,7 +601,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;
-    background: #f6f6f6;
+    background: #ffffff;
     margin-bottom: 16px;
     border-radius: 8px;
 }
@@ -641,12 +643,17 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 800;
+}
+
+.total-modal-row span {
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .total-modal-row .price-val {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 00;
 }
 
 .btn-recharge-confirm {
