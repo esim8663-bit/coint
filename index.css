@@ -12,7 +12,7 @@ body {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    background: #e6e6e6;
+    background: #f6f6f6;
     color: #161823;
     -webkit-user-select: none;
     user-select: none;
@@ -25,7 +25,7 @@ body {
     justify-content: space-between;
     padding: 14px;
     position: sticky;
-    background-color: #107e61;
+    
     top: 0;
     z-index: 1000;
 }
@@ -230,7 +230,7 @@ body {
 .coinmen {
     width: 100%;
     height: auto;
-    background-color: #eaeaea;
+    background-color: #f6f6f6;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -289,7 +289,7 @@ body {
 }
 
 .reward-card:active {
-    background: #fafafa;
+    background: #f6f6f6;
 }
 
 .reward-left {
@@ -599,7 +599,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;
-    background: #ffffff;
+    background: #f6f6f6;
     margin-bottom: 16px;
     border-radius: 8px;
 }
@@ -607,7 +607,7 @@ body {
 .keypad-special button {
     height: 48px;
     border: none;
-    background: #eeeeee;
+    background: #f6f6f6;
     border-radius: 6px;
     font-size: 18px;
     font-weight: 500;
@@ -617,7 +617,7 @@ body {
 }
 
 .keypad-special button:active {
-    background: #eaeaea;
+    background: #f2f2f2;
 }
 
 .k-triple {
